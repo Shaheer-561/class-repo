@@ -1,0 +1,95 @@
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #3a3a3a, #070707);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background: linear-gradient(45deg, #ff6b6b, #f94d6d, #fc61b1, #f941d5, #c032e7);
+  background-size: 400% 400%;
+  padding: 5px; 
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: gradient-animation 6s ease infinite;
+}
+
+.card {
+  background-color: rgb(5, 5, 5);
+  padding: 25px 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  width: fit-content;
+  height: fit-content;
+}
+
+.socialContainer {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 2px solid transparent; /* Add a border size */
+}
+
+
+.containerOne:hover {
+  background-color: #d62976; /* Instagram */
+  border-color: #d62976;
+}
+
+.containerTwo:hover {
+  background-color: #faa356; /* GitHub hover color */
+  border-color: #333;
+}
+
+.containerThree:hover {
+  background-color: #0077b5; /* LinkedIn */
+  border-color: #0077b5;
+}
+
+.containerFour:hover {
+  background-color: #25d366; /* WhatsApp */
+  border-color: #25d366;
+}
+
+.socialContainer:hover {
+  transform: scale(1.1);
+}
+
+.instagramSvg, .githubSvg, .linkdinSvg, .whatsappSvg {
+  fill: white;
+  width: 40px;
+  height: 40px;
+  transition: fill 0.3s ease;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
